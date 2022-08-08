@@ -1,0 +1,25 @@
+{
+  "name": "json-to-proto",
+  "version": "1.0.0",
+  "description": "JSON protobuf descriptor to .proto file",
+  "repository": "https://github.com/Myuujinn/json-to-proto",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node-dev --respawn -- src/index.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Myuujinn",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.6.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.2"
+  }
+}
