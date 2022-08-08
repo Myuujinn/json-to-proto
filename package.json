@@ -1,6 +1,6 @@
 {
   "name": "json-to-proto",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JSON protobuf descriptor to .proto file",
   "repository": "https://github.com/Myuujinn/json-to-proto",
   "scripts": {
@@ -8,6 +8,8 @@
     "dev": "ts-node-dev --respawn -- src/index.ts",
     "build": "tsc"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "keywords": [],
   "author": "Myuujinn",
   "license": "MIT",

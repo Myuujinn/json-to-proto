@@ -1,3 +1,2 @@
-import { jsonToProto } from "./jsonToProto";
-
-export { jsonToProto };
+export * from "./jsonToProto";
+export * from "./types";
