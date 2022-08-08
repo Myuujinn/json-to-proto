@@ -45,7 +45,3 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Victor LE DANTEC** - [Myuujinn](https://github.com/Myuujinn)
-
-## License
-
-[MIT License](https://andreasonny.mit-license.org/2019) © Andrea SonnY
