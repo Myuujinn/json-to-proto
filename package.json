@@ -1,6 +1,6 @@
 {
   "name": "json-to-proto",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "JSON protobuf descriptor to .proto file",
   "repository": "https://github.com/Myuujinn/json-to-proto",
   "scripts": {
