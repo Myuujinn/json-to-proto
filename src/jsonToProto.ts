@@ -36,11 +36,18 @@ const writePackage = (name: string) => {
 const writeService = (name: string, service: IService) => {
   writeLine(`service ${name} {`);
 
-  for (const [methodName, { requestType, responseType }] of Object.entries(service.methods)) {
-    writeLine(`rpc ${methodName}(${requestType}) returns (${responseType}) {}`, {
-      lineBreaks: 1,
-      indent: 4,
-    });
+  for (const [methodName, { requestType, responseType, responseStream }] of Object.entries(
+    service.methods,
+  )) {
+    writeLine(
+      `rpc ${methodName}(${requestType}) returns (${
+        responseStream ? "stream " : ""
+      }${responseType}) {}`,
+      {
+        lineBreaks: 1,
+        indent: 4,
+      },
+    );
   }
   writeLine(`}`, { lineBreaks: 2 });
 };
@@ -48,8 +55,8 @@ const writeService = (name: string, service: IService) => {
 const writeMessage = (name: string, service: IType) => {
   writeLine(`message ${name} {`);
 
-  for (const [fieldName, { type, id }] of Object.entries(service.fields)) {
-    writeLine(`${type} ${fieldName} = ${id};`, {
+  for (const [fieldName, { type, id, rule }] of Object.entries(service.fields)) {
+    writeLine(`${rule ? rule + " " : ""}${type} ${fieldName} = ${id};`, {
       lineBreaks: 1,
       indent: 4,
     });
